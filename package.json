@@ -1,0 +1,8 @@
+{
+  "name": "library_app",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "webpack-dev-server": "^4.2.1"
+  }
+}
