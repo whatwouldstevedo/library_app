@@ -1,30 +1,33 @@
-class LibrariesController < ApplicationController
+# frozen_string_literal: true
 
-  def index # метод для отображения библиотек
+class LibrariesController < ApplicationController
+  # method to display all libraries
+  def index
     @library = Library.all
   end
 
-  def new # метод для добавления новых библиотек
-    @library = Library.new     
+  # method to add new libraries
+  def new
+    @library = Library.new
   end
 
   def show
-    @library = Library.find(params[:id])    
+    @library = Library.find(params[:id])
   end
 
   def edit
     @library = Library.find(params[:id])
-    redirect_to @library 
+    redirect_to @library
   end
 
   def update
     @library = Library.find(params[:id])
-        
-    if(@library.update(library_params))                           
-        redirect_to @library                   
+
+    if @library.update(library_params)
+      redirect_to @library
     else
-        render 'edit'
-    end      
+      render 'edit'
+    end
   end
 
   def destroy
@@ -35,21 +38,25 @@ class LibrariesController < ApplicationController
   end
 
   def create
-    # проверка на сохранение библиотек в базу данных
+    # check for saving libraries to the database
     # render plain: params[:library].inspect
 
-    @library = Library.new(library_params) # обращаемся к нужной модели
+    # call the model
+    @library = Library.new(library_params)
 
-    if(@library.save) # сохраняет в бд
-        redirect_to @library # перенаправляет в метод show 
+    # save in database
+    if @library.save
+      # redirect to show method
+      redirect_to @library
     else
-        render 'edit'
+      render 'edit'
     end
   end
 
   private
 
+  # allow fields
   def library_params
-    params.require(:library).permit(:name, :country, :body) # разрешает поля
+    params.require(:library).permit(:name, :country, :body)
   end
 end

@@ -1,4 +1,6 @@
+# frozen_string_literal: true
+
 class Library < ApplicationRecord
-  # проверяем на валидность поле name, true значит что валидация будет вызываться автоматически
-  validates :name, length: {minimum: 5}  
+  # check validation for "name" field, true means validation will be called automatically
+  validates :name, length: { minimum: 5 }
 end

@@ -1,31 +1,31 @@
 <h2>Add new library</h2>
 <%= form_for :library, url: libraries_path do |f| %>
 
-<%# ниже метод, который будет отображать ошибки, при непрохождении валидации  %>
+<%# below method to showing errors if validation does not work  %>
 
 <% if @library.errors.any? %>
-    <% @library.errors.full_messages.each do |msg| %>
-        <div class="alert alert-danger"><%= msg %></div>
-    <% end %>
+  <% @library.errors.full_messages.each do |msg| %>
+    <div class="alert alert-danger"><%= msg %></div>
+  <% end %>
 <% end %>
 
 <p>
-    Name<br>
-    <%= f.text_field :name %>
+  Name<br>
+  <%= f.text_field :name %>
 </p>
 
 <p>
-    Country Name<br>
-    <%= f.text_field :country %>
+  Country Name<br>
+  <%= f.text_field :country %>
 </p>
 
 <p>
-    Description<br>
-    <%= f.text_area :body %>
+  Description<br>
+  <%= f.text_area :body %>
 </p>
 
 <p>
-    <%= f.submit %>
+  <%= f.submit %>
 </p>
 
 <% end %>
