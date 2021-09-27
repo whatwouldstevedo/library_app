@@ -1,0 +1,31 @@
+<h2>Edit Library</h2>
+<%= form_for :library, url: library_path(@library), method: :patch do |f| %>
+
+<%# ниже метод, который будет отображать ошибки, при непрохождении валидации  %>
+
+<% if @library.errors.any? %>
+    <% @library.errors.full_messages.each do |msg| %>
+        <div class="alert alert-danger"><%= msg %></div>
+    <% end %>
+<% end %>
+
+<p>
+    Name<br>
+    <%= f.text_field :name %>
+</p>
+
+<p>
+    Country Name<br>
+    <%= f.text_field :country %>
+</p>
+
+<p>
+    Description<br>
+    <%= f.text_area :body %>
+</p>
+
+<p>
+    <%= f.submit %>
+</p>
+
+<% end %>
