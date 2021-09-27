@@ -1,24 +1,36 @@
-# README
+# Library App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Library App helps you find books from different libraries around the world. You can also add your own library and fill it with books which your want to share with.
 
-Things you may want to cover:
+##### 1. Prerequisites
 
-* Ruby version
+The setups steps expect following tools installed on the system.
 
-* System dependencies
+- Ruby [2.6.7](https://www.ruby-lang.org/en/documentation/installation/)
+- Rails [5.2.6](https://github.com/rails/rails/tree/v5.2.6)
+- Node.js[16.10](https://nodejs.org/ru/download/releases/)
+- PostgreSQL[12.8](https://www.postgresql.org/download/) 
 
-* Configuration
+##### 2. Installing bundler and dependencies:
 
-* Database creation
+```bash
+gem install bundler
+```
 
-* Database initialization
+```bash
+bundle install
+```
+##### 3. Prepare the database:
 
-* How to run the test suite
+```bash
+bundle exec rails db:create
+bundle exec rails db:migrate
+bundle exec rails db:seed
+```
+##### 4. Start the Rails server:
 
-* Services (job queues, cache servers, search engines, etc.)
+```ruby
+bundle exec rails s
+```
 
-* Deployment instructions
-
-* ...
+And now you can visit the site with the URL http://localhost:3000
