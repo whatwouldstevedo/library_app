@@ -1,8 +1,8 @@
 # frozen_string_literal: true
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
+libraries = Library.create([{name: 'Russian Government Library', country: 'Russia', body: 'blablabla'}])
+libraries = Library.create([{name: 'United States Government Library', country: 'USA', body: 'qwerty'}])
+libraries = Library.create([{name: 'British Government Library', country: 'UK', body: 'loren ipsum'}])
+authors = Author.create([{name: 'Alexander', surname: 'Pushkin', country: 'Russia'}])
+authors = Author.create([{name: 'Kurt', surname: 'Vonnegut', country: 'USA'])
+authors = Author.create([{name: ' Arthur Conan ', surname: 'Doyle', country: 'USA'])
