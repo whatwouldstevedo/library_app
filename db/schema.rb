@@ -17,6 +17,9 @@ ActiveRecord::Schema.define(version: 2021_09_28_143900) do
 
   create_table "authors", force: :cascade do |t|
     t.bigint "library_id"
+    t.string "name"
+    t.string "surname"
+    t.string "country"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["library_id"], name: "index_authors_on_library_id"
