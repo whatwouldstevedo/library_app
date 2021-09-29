@@ -3,7 +3,7 @@
 class AuthorsController < ApplicationController
   # method to display all authors
   def index
-    @author = Author.all
+    @authors = Author.all
   end
 
   # method to add new authors

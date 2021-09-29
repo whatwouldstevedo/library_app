@@ -1,11 +1,11 @@
 <div class="container">
   <h1>All libraries</h1>
-  <% @library.each do |library| %>
+  <% @libraries.each do |libraries| %>
     <div class="alert alert-primary">
-      <h2><b><%= library.name %></b></h2>
-      <p><%= library.country %>
-      <p><%= library.body %>
-      <%= link_to "Читать далее",library_path(library), :class => 'btn btn-outline-dark' %>
+      <h2><b><%= libraries.name %></b></h2>
+      <p><%= libraries.country %>
+      <p><%= libraries.body %>
+      <%= link_to "Читать далее",library_path(libraries), :class => 'btn btn-outline-dark' %>
     </div>
   <% end %>
 </div>

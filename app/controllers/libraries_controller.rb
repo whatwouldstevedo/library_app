@@ -3,7 +3,7 @@
 class LibrariesController < ApplicationController
   # method to display all libraries
   def index
-    @library = Library.all
+    @libraries = Library.all
   end
 
   # method to add new libraries
